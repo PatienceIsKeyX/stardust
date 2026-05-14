@@ -2,30 +2,9 @@
   "required": false,
   "package": "dev.stardust.mixin.meteor",
   "compatibilityLevel": "JAVA_21",
-  "client": [
-    "PeekScreenMixin",
-    "ModuleScreenMixin",
-    "ModulesScreenMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 0
   },
-  "mixins": [
-    "AutoLogMixin",
-    "FreecamMixin",
-    "WHeaderMixin",
-    "WWindowMixin",
-    "GuiThemeMixin",
-    "NametagsMixin",
-    "AutoMendMixin",
-    "NoRenderMixin",
-    "NotifierMixin",
-    "ExpThrowerMixin",
-    "OnlinePlayersMixin",
-    "BetterTooltipsMixin",
-    "MeteorGuiThemeMixin",
-    "PacketCancellerMixin",
-    "accessor.SettingAccessor",
-    "accessor.CategoryAccessor"
-  ]
+  "mixins": []
 }
