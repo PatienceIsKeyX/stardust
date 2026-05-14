@@ -6,7 +6,5 @@
   "injectors": {
     "defaultRequire": 0
   },
-  "mixins": [
-    "MinimapRendererMixin"
-  ]
+  "mixins": []
 }
