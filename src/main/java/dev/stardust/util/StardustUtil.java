@@ -2,14 +2,8 @@ package dev.stardust.util;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import java.util.UUID;
-import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.properties.Property;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.ProfileComponent;
 import io.netty.util.internal.ThreadLocalRandom;
-import static meteordevelopment.meteorclient.MeteorClient.mc;
 
 /**
  * @author Tas [@0xTas] <root@0xTas.dev>
@@ -126,24 +120,6 @@ public class StardustUtil {
         Items.ENCHANTED_GOLDEN_APPLE.getDefaultStack(),
         Items.HEARTBREAK_POTTERY_SHERD.getDefaultStack(),
         Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE.getDefaultStack(),
-        getAxolotlHead()
+        Items.AXOLOTL_BUCKET.getDefaultStack()
     };
-
-    private static ItemStack getAxolotlHead() {
-        ItemStack playerHead = new ItemStack(Items.PLAYER_HEAD);
-        GameProfile profile = new GameProfile(UUID.randomUUID(), "Stardust");
-        ProfileComponent profileComponent = new ProfileComponent(profile);
-
-        // Tas head texture
-        profileComponent.properties().put(
-            "textures",
-            new Property(
-                "textures",
-                "ewogICJ0aW1lc3RhbXAiIDogMTcyODQwNzM3MDc3MiwKICAicHJvZmlsZUlkIiA6ICJjZTA5ODE3NzBkMjc0NmY1YTM3ODUxODg5NzcxYmEyNyIsCiAgInByb2ZpbGVOYW1lIiA6ICIweFRhcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yZGNlNGNlNWVhOWJjNWI1OTI1MmJlNDk1YTA5ZTQ0ZWFmMzc5NmRmNDY5OTU2MTdmZGQ4ZjFmMTBkNjU0ZjQyIgogICAgfQogIH0KfQ==",
-                ""
-            )
-        );
-        playerHead.set(DataComponentTypes.PROFILE, profileComponent);
-        return playerHead;
-    }
 }
